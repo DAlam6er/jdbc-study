@@ -1,6 +1,6 @@
 package com.dmdev.jdbc.starter;
 
-import com.dmdev.jdbc.starter.util.ConnectionManager;
+import com.dmdev.jdbc.starter.util.ConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,7 +20,7 @@ public class TransactionRunner
         PreparedStatement deleteTicketsStatement = null;
         try
         {
-            connection = ConnectionManager.open();
+            connection = ConnectionPool.get();
             deleteFlightStatement =
                 connection.prepareStatement(deleteFlightSql);
             deleteTicketsStatement =

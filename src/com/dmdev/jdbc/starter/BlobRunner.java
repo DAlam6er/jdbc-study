@@ -1,12 +1,14 @@
 package com.dmdev.jdbc.starter;
 
-import com.dmdev.jdbc.starter.util.ConnectionManager;
+import com.dmdev.jdbc.starter.util.ConnectionPool;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class BlobRunner
 {
@@ -26,7 +28,7 @@ public class BlobRunner
             SET image = ?
             WHERE id = 1
             """;
-        try (var connection = ConnectionManager.open();
+        try (var connection = ConnectionPool.get();
              var preparedStatement = connection.prepareStatement(sql))
         {
             preparedStatement.setBytes(1, Files.readAllBytes(
@@ -43,7 +45,7 @@ public class BlobRunner
             FROM aircraft
             WHERE id = ?
             """;
-        try (var connection = ConnectionManager.open();
+        try (var connection = ConnectionPool.get();
              var preparedStatement = connection.prepareStatement(sql))
         {
             preparedStatement.setInt(1, 1);
@@ -67,7 +69,7 @@ public class BlobRunner
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
-            connection = ConnectionManager.open();
+            connection = ConnectionPool.get();
             connection.setAutoCommit(false);
             preparedStatement = connection.prepareStatement(sql);
             var blob = connection.createBlob();

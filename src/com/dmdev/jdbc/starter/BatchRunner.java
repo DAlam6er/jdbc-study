@@ -1,9 +1,8 @@
 package com.dmdev.jdbc.starter;
 
-import com.dmdev.jdbc.starter.util.ConnectionManager;
+import com.dmdev.jdbc.starter.util.ConnectionPool;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -20,7 +19,7 @@ public class BatchRunner
         Statement statement = null;
         try
         {
-            connection = ConnectionManager.open();
+            connection = ConnectionPool.get();
             connection.setAutoCommit(false);
 
             statement = connection.createStatement();
