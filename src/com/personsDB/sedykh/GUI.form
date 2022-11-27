@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.personsDB.sedykh.GUI">
+  <grid id="27dc6" binding="jpanMain" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <preferredSize width="400" height="300"/>
+    </properties>
+    <border type="bevel-lowered"/>
+    <children>
+      <grid id="6a245" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="d0627" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="South"/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="f82c5" class="javax.swing.JButton" binding="jbtnUpload">
+                <constraints/>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="upload"/>
+                </properties>
+              </component>
+              <component id="639da" class="javax.swing.JButton" binding="jbtnShowAll">
+                <constraints/>
+                <properties>
+                  <text value="show all"/>
+                </properties>
+              </component>
+              <component id="7fec2" class="javax.swing.JButton" binding="jbtnSortByName">
+                <constraints/>
+                <properties>
+                  <text value="sort by name"/>
+                </properties>
+              </component>
+              <component id="a3803" class="javax.swing.JButton" binding="jbtnShowAtAge">
+                <constraints/>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="show at age"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <scrollpane id="bb0a7" binding="jscrlPane">
+            <constraints border-constraint="Center"/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="d08f5" class="javax.swing.JTable" binding="jtblPersonData">
+                <constraints/>
+                <properties/>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <grid id="10e75" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="c366f" class="javax.swing.JFormattedTextField" binding="jtxtAge">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="33c0f" class="javax.swing.JTextField" binding="jtxtName">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="7bdc9" class="javax.swing.JLabel" binding="jlblAge">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Age"/>
+            </properties>
+          </component>
+          <component id="b1684" class="javax.swing.JLabel" binding="jlblName">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Name"/>
+            </properties>
+          </component>
+          <vspacer id="2e19">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="e43e9">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <hspacer id="129eb">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="4f129">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <vspacer id="16f8">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+        </children>
+      </grid>
+      <hspacer id="5ca3">
+        <constraints border-constraint="East"/>
+      </hspacer>
+      <hspacer id="3f17c">
+        <constraints border-constraint="West"/>
+      </hspacer>
+    </children>
+  </grid>
+</form>
