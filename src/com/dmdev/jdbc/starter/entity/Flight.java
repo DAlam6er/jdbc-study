@@ -9,5 +9,5 @@ public record Flight(Long id,
                      LocalDateTime arrivalDate,
                      String arrivalAirportCode,
                      Integer aircraftId,
-                     String status)
-{}
+                     String status) {
+}
